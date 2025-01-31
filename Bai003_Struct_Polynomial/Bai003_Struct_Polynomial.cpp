@@ -1,11 +1,12 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-
+//1. Dinh nghia cau truc da thuc
 struct DaThucBac2{
   int hso[5]={0,0,0,0,0};
 };
 
+//2. Da thuc tong
 DaThucBac2 TongHaiDaThuc(DaThucBac2 dt1, DaThucBac2 dt2){
  DaThucBac2 DaThucTong;
  for (int i=0;i<=2;i++)
@@ -13,6 +14,7 @@ DaThucBac2 TongHaiDaThuc(DaThucBac2 dt1, DaThucBac2 dt2){
  return DaThucTong;
 }
 
+//3. Da Thuc Hieu
 DaThucBac2 HieuHaiDaThuc(DaThucBac2 dt1, DaThucBac2 dt2){
  DaThucBac2 DaThucHieu;
  for (int i=0;i<=2;i++)
@@ -20,6 +22,7 @@ DaThucBac2 HieuHaiDaThuc(DaThucBac2 dt1, DaThucBac2 dt2){
  return DaThucHieu;
 }
 
+//4. Tich Da Thuc
 DaThucBac2 TichHaiDaThuc (DaThucBac2 dt1, DaThucBac2 dt2){
  DaThucBac2 DaThucTich;
  for (int i=0;i<=2;i++)
@@ -28,6 +31,7 @@ DaThucBac2 TichHaiDaThuc (DaThucBac2 dt1, DaThucBac2 dt2){
  return DaThucTich;
 }
 
+//5.Gia Tri Da Thuc
 int GiaTriDaThuc (int x, DaThucBac2 dt){
   int giatri=0;
   for (int i=0;i<=2;i++)
@@ -35,6 +39,7 @@ int GiaTriDaThuc (int x, DaThucBac2 dt){
   return giatri;
 }
 
+//6. Nhap da thuc
 void nhap(DaThucBac2 &dt){
   for (int i=0;i<=2;i++){
     cout<<"Nhap he so bac "<<i<<" ";
@@ -42,6 +47,7 @@ void nhap(DaThucBac2 &dt){
   }
 }
 
+//7. Xuat da thuc
 void xuat(DaThucBac2 dt){
   cout<<dt.hso[0];
   for (int i=1;i<=5;i++){
