@@ -1,27 +1,32 @@
 #include <iostream>
 using namespace std;
 
+//1. Định nghĩa cấu trúc thời gian
 struct time{
  int hour;
  int minute;
  int second;
 };
 
+//2. Hàm nhập thời gian
 void nhap(time &tg){
   cin>>tg.hour;
   cin>>tg.minute;
   cin>>tg.second;
 }
 
+//3. Hàm xuất thời gian
 void xuat(time tg){
   cout<<"Thoi gian sau la "<< tg.hour<<":"<<tg.minute<<":"<<tg.second;
 }
 
+//4. Hàm kiểm tra thời gian
 bool check(time tg){
 if (tg.hour>23 || tg.hour<0 || tg.minute<0 || tg.minute>=60 || tg.second<0 || tg.second>=60) return false;
 return true;
 }
 
+//5. Hàm cộng thời gian
 time ThoiGianSau(time current, time after){
     time timeafter=current;
     timeafter.second+=after.second;
@@ -44,8 +49,6 @@ time ThoiGianSau(time current, time after){
     }
     return timeafter;
 }
-
-
 
 int main()
 {
